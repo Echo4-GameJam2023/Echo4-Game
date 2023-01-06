@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Trap
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX
@@ -12,8 +15,8 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
+  - Terrain
+  - FloorSlab
   - 
   - 
   - 
@@ -46,4 +49,13 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1422378749
+    locked: 0
+  - name: Terrain
+    uniqueID: 2631952929
+    locked: 0
+  - name: FloorSlabs
+    uniqueID: 3728199211
+    locked: 0
+  - name: Player
+    uniqueID: 39807811
     locked: 0
