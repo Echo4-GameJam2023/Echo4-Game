@@ -9,6 +9,12 @@ public class NextLevel : MonoBehaviour
     private bool lvlCompleptedP1 = false; 
     private bool lvlCompleptedP2 = false;
 
+    private AudioSource win;
+    // Start is called before the first frame update
+    void Start()
+    {
+        win = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,6 +37,7 @@ public class NextLevel : MonoBehaviour
         if (lvlCompleptedP1 && lvlCompleptedP2)
         {
             levelCompleted = true;
+            win.Play();
             Invoke("CompleteLevel", 2);
         }
     }

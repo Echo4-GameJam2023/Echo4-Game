@@ -8,12 +8,14 @@ public class PlayerLife : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+    private AudioSource death;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        
+        death = GetComponent<AudioSource>();
+
     }
 
 
@@ -28,6 +30,8 @@ public class PlayerLife : MonoBehaviour
 
     private void Die()
     {
+
+        death.Play();
         
         rb.bodyType = RigidbodyType2D.Static;
         Invoke("renderDisable", 1);
